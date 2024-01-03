@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:HotelDesktop.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="HotelDesktop.Views.UserControls.RolePlacesSettingsUC"
+             x:DataType="viewModels:RolePlacesSettingsVM">
+    <UserControl.Resources>
+        <!--Шаблон элемента списка-->       
+        <DataTemplate x:Key="RolePlaceListItemTemplate" x:CompileBindings="False">
+                <Border BorderBrush="#3B70BA" BorderThickness="3"
+                        Margin="5" Width="75" Height="75" CornerRadius="30">
+                    <Button Tag="{Binding Path=Id}" Background="#5D84BA"
+                            Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}},
+                            Path=SelectElement}" CommandParameter="{Binding}">
+                        
+                        <StackPanel>
+                            <Image Source="{Binding Image}">
+                        
+                            </Image>
+                            <TextBlock Text="{Binding Title}"/>
+                        </StackPanel>
+                    </Button>            
+                </Border>
+        </DataTemplate>
+    </UserControl.Resources>   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/> 
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="20" FontWeight="Bold" Text="Настройка доступности ролевых мест" HorizontalAlignment="Center"/>       
+            <ListBox  Background="#5D84BA"
+                      Margin="0 10 0 0"
+                      ItemsSource="{Binding RolePlaceItemsList}"
+                      ItemTemplate="{StaticResource RolePlaceListItemTemplate}"
+                      >
+
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="3" Columns="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</UserControl>
