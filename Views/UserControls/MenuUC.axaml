@@ -7,10 +7,80 @@
              x:Class="HotelDesktop.Views.UserControls.MenuUC"
              x:DataType="viewModels:MenuVM"
              FontWeight="Bold" FontSize="16">
-    <StackPanel Orientation="Horizontal">
-        <Button Content="Настройки ролевых мест" Height="35"  Background="Coral" Margin="0 0 15 0"
-                Command="{Binding RolePlacesSettingsCmd}"/>
-        <Button Content="Выход" VerticalAlignment="Center" Height="35" Background="Coral"
-                Command="{Binding ExitCmd}"/>
-    </StackPanel>
+    <UserControl.Styles>
+        <StyleInclude Source="../../Styles/Style.axaml" />
+    </UserControl.Styles>
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <ComboBox PlaceholderText="Администрирование" Classes="menuComboBox">
+                <Button Content="Настройки ролевых мест" Classes="menuBtn"
+                        Command="{Binding RolePlacesSettingsCmd}" />
+                <Button Content="Пользователи" Classes="menuBtn"
+                        Command="{Binding UsersCmd}" />
+                <Button Content="Ролевые места" Classes="menuBtn"
+                        Command="{Binding RolePlacesCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Документооборот" Classes="menuComboBox">
+                <Button Content="ИНН" Classes="menuBtn"
+                        Command="{Binding INNsCmd}" />
+                <Button Content="Паспорта" Classes="menuBtn"
+                        Command="{Binding PassportsCmd}" />
+                <Button Content="Пункты выдачи паспортов" Classes="menuBtn"
+                        Command="{Binding PassportIssuersCmd}" />
+                <Button Content="СНИЛСы" Classes="menuBtn"
+                        Command="{Binding SNILSEsCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Кадровый учёт" Classes="menuComboBox">
+                <Button Content="Должности" Classes="menuBtn"
+                        Command="{Binding PositionsCmd}" />
+                <Button Content="Отделы" Classes="menuBtn"
+                        Command="{Binding DepartmentsCmd}" />
+                <Button Content="Сотрудники" Classes="menuBtn"
+                        Command="{Binding EmployeesCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Коммуникации" Classes="menuComboBox">
+                <Button Content="Мессенджер" Classes="menuBtn"
+                        Command="{Binding MessangerCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Размещение" Classes="menuComboBox">
+                <Button Content="Бронирования" Classes="menuBtn"
+                        Command="{Binding ReservationsCmd}" />
+                <Button Content="Гости" Classes="menuBtn"
+                        Command="{Binding GuestsCmd}" />
+                <Button Content="Номера" Classes="menuBtn"
+                        Command="{Binding RoomsCmd}" />
+                <Button Content="Тарифы" Classes="menuBtn"
+                        Command="{Binding TariffsCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Услуги отеля" Classes="menuComboBox">
+                <Button Content="Услуги" Classes="menuBtn"
+                        Command="{Binding ServicesCmd}" />
+            </ComboBox>
+
+            <ComboBox PlaceholderText="Финансы" Classes="menuComboBox">
+                <Button Content="Банковские карты" Classes="menuBtn"
+                        Command="{Binding BankCardsCmd}" />
+                <Button Content="Банки" Classes="menuBtn"
+                        Command="{Binding BanksCmd}" />
+                <Button Content="Кассы" Classes="menuBtn"
+                        Command="{Binding CashDesksCmd}" />
+                <Button Content="Налоги" Classes="menuBtn"
+                        Command="{Binding TaxesCmd}" />
+                <Button Content="Платёжные системы" Classes="menuBtn"
+                        Command="{Binding PaymentSystemsCmd}" />
+                <Button Content="Счета" Classes="menuBtn"
+                        Command="{Binding AccountCmd}" />
+                <Button Content="Транзакции" Classes="menuBtn"
+                        Command="{Binding TransactionsCmd}" />
+            </ComboBox>
+
+            <Button Content="Выход из системы" VerticalAlignment="Center" Classes="menuBtn"
+                    Command="{Binding ExitCmd}" Margin="0 15 0 0" />
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

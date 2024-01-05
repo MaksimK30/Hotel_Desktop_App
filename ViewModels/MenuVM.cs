@@ -23,9 +23,134 @@ public class MenuVM : ViewModelBase
     {
     }
 
-    public ICommand ExitCmd()
+    public ICommand AccountCmd()
     {
         Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand BankCardsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand BanksCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand CashDesksCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand DepartmentsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand EmployeesCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand GuestsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand INNsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand MessangerCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand PassportIssuersCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand PassportsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand PaymentSystemsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand PositionsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand ReservationsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand RoomsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand ServicesCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand SNILSEsCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand TariffsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand TaxesCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand TransactionsCmd()
+    {
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        return null;
+    }
+    
+    public ICommand UsersCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
+
+    public ICommand RolePlacesCmd()
+    {
         return null;
     }
 
@@ -35,4 +160,9 @@ public class MenuVM : ViewModelBase
         return null;
     }
     
+    public ICommand ExitCmd()
+    {
+        Environment.Exit(0);
+        return null;
+    }
 }

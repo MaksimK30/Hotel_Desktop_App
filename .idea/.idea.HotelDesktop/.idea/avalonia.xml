@@ -4,9 +4,12 @@
     <option name="projectPerEditor">
       <map>
         <entry key="App.axaml" value="HotelDesktop.csproj" />
+        <entry key="Style.axaml" value="HotelDesktop.csproj" />
+        <entry key="Styles/Style.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/MainWindow.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/MenuUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/RolePlacesSettingsUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Ыендуы.axaml" value="HotelDesktop.csproj" />
       </map>
     </option>
   </component>

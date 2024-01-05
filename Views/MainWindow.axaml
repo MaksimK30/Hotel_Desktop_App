@@ -4,19 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:userControls="clr-namespace:HotelDesktop.Views.UserControls"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1336" d:DesignHeight="768"
         x:Class="HotelDesktop.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="HotelDesktop">
+        Title="HotelDesktop"
+        Background="#63ADD0"
+        Foreground="White">
 
-    <Grid>
+    <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.8*"/>
+            <ColumnDefinition Width="8.2*"/>
+        </Grid.ColumnDefinitions>
         
-        <ContentControl Grid.Row="0"
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Меню" FontSize="25" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <ContentControl Grid.Row="1" Grid.Column="0"
                         IsVisible="{Binding MenuVisible}"
                         Content="{Binding CurrentMenu}">
             <ContentControl.DataTemplates>
@@ -26,7 +35,7 @@
             </ContentControl.DataTemplates>
         </ContentControl>
         
-        <ContentControl Grid.Row="1"
+        <ContentControl Grid.Row="1" Grid.Column="1"
                         Content="{Binding CurrentVM}">
             <ContentControl.DataTemplates>
                 <DataTemplate DataType="{x:Type vm:RolePlacesSettingsVM}">
