@@ -1,4 +1,9 @@
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using DynamicData;
+using HotelDesktop.Context;
+using HotelDesktop.Models;
 using HotelDesktop.Models.ExtendedModels;
 using ReactiveUI;
 
@@ -15,6 +20,28 @@ public class InnsTabVM : ViewModelBase
         {
             _innsList = value;
             this.RaisePropertyChanged();
+        }
+    }
+
+    public InnsTabVM()
+    {
+        HotelDbContext dbContext = new HotelDbContext();
+        InnsList = new ObservableCollection<InnTabRecord>();
+        List<Inn> rawInnsList = new List<Inn>();
+        rawInnsList = dbContext.Inns.ToList();
+        
+        foreach (var item in rawInnsList)
+        {
+            Passport passport = dbContext.Passports
+                .Where(p => p.Id == dbContext.Users.Where(u => u.Inn.Id == item.Id).FirstOrDefault().PassportId)
+                .FirstOrDefault();
+            
+            InnsList.Add(new InnTabRecord()
+            {
+                Number = item.Number,
+                GetDate = item.GetDate.ToString(),
+                User = $"{passport.Lastname} {passport.Name[0]}.{passport.Patronymic[0]}"
+            });
         }
     }
 }

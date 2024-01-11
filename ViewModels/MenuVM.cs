@@ -1,6 +1,7 @@
 using System;
 using System.Reactive;
 using System.Windows.Input;
+using HotelDesktop.ViewModels.Tabs;
 using ReactiveUI;
 
 namespace HotelDesktop.ViewModels;
@@ -65,9 +66,9 @@ public class MenuVM : ViewModelBase
         return null;
     }
 
-    public ICommand INNsCmd()
+    public ICommand InnsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new InnsTabVM();
         return null;
     }
     

@@ -23,7 +23,7 @@
 
             <ComboBox PlaceholderText="Документооборот" Classes="menuComboBox">
                 <Button Content="ИНН" Classes="menuBtn"
-                        Command="{Binding INNsCmd}" />
+                        Command="{Binding InnsCmd}" />
                 <Button Content="Паспорта" Classes="menuBtn"
                         Command="{Binding PassportsCmd}" />
                 <Button Content="Пункты выдачи паспортов" Classes="menuBtn"

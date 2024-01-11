@@ -7,8 +7,12 @@
         <entry key="Style.axaml" value="HotelDesktop.csproj" />
         <entry key="Styles/Style.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/MainWindow.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Forms/INNsFormUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Forms/InnsFormUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/MenuUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/RolePlacesSettingsUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/INNsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/InnsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Ыендуы.axaml" value="HotelDesktop.csproj" />
       </map>
     </option>

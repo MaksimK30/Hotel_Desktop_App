@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:userControls="clr-namespace:HotelDesktop.Views.UserControls"
-        mc:Ignorable="d" d:DesignWidth="1336" d:DesignHeight="768"
+        xmlns:VMtabs="clr-namespace:HotelDesktop.ViewModels.Tabs"
+        xmlns:UCtabs="clr-namespace:HotelDesktop.Views.UserControls.Tabs"
+        mc:Ignorable="d" MinWidth="1336" MinHeight="768"
         x:Class="HotelDesktop.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -40,6 +42,9 @@
             <ContentControl.DataTemplates>
                 <DataTemplate DataType="{x:Type vm:RolePlacesSettingsVM}">
                     <userControls:RolePlacesSettingsUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:InnsTabVM}">
+                    <UCtabs:InnsTabUC/>
                 </DataTemplate>
             </ContentControl.DataTemplates>
         </ContentControl>

@@ -5,6 +5,6 @@
              xmlns:forms="clr-namespace:HotelDesktop.ViewModels.Forms"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="HotelDesktop.Views.UserControls.Forms.InnsFormUC"
-             x:DataType="forms:INNsFormVM">
+             x:DataType="forms:InnsFormVM">
     
 </UserControl>

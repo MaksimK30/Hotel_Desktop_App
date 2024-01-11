@@ -10,6 +10,6 @@ public partial class InnsTabUC : UserControl
     public InnsTabUC()
     {
         InitializeComponent();
-        DataContext = new INNsTabVM();
+        DataContext = new InnsTabVM();
     }
 }
