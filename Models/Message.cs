@@ -18,7 +18,7 @@ public partial class Message
 
     public bool IsReaded { get; set; }
 
-    public string? Theme { get; set; }
+    public string Theme { get; set; } = null!;
 
     public string MessageText { get; set; } = null!;
 

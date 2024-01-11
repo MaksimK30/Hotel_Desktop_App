@@ -163,11 +163,7 @@ public partial class HotelDbContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BankId).HasColumnName("bank_id");
-            entity.Property(e => e.BlockReason)
-                .HasColumnType("character varying")
-                .HasColumnName("block_reason");
             entity.Property(e => e.ExpiredDate).HasColumnName("expired_date");
-            entity.Property(e => e.IsBlocked).HasColumnName("is_blocked");
             entity.Property(e => e.Number)
                 .HasMaxLength(20)
                 .HasColumnName("number");
@@ -293,9 +289,18 @@ public partial class HotelDbContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.GetDate).HasColumnName("get_date");
+            entity.Property(e => e.Lastname)
+                .HasColumnType("character varying")
+                .HasColumnName("lastname");
+            entity.Property(e => e.Name)
+                .HasColumnType("character varying")
+                .HasColumnName("name");
             entity.Property(e => e.Number)
                 .HasMaxLength(14)
                 .HasColumnName("number");
+            entity.Property(e => e.Patronymic)
+                .HasColumnType("character varying")
+                .HasColumnName("patronymic");
         });
 
         modelBuilder.Entity<Message>(entity =>
@@ -360,6 +365,9 @@ public partial class HotelDbContext : DbContext
             entity.Property(e => e.Series)
                 .HasMaxLength(4)
                 .HasColumnName("series");
+            entity.Property(e => e.UnitCode)
+                .HasMaxLength(7)
+                .HasColumnName("unit_code");
 
             entity.HasOne(d => d.Gender).WithMany(p => p.Passports)
                 .HasForeignKey(d => d.GenderId)
@@ -382,13 +390,12 @@ public partial class HotelDbContext : DbContext
 
             entity.ToTable("passport_issuers", tb => tb.HasComment("Отделения выдачи паспортов"));
 
+            entity.HasIndex(e => e.Title, "passport_issuers_title_key").IsUnique();
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Title)
                 .HasColumnType("character varying")
                 .HasColumnName("title");
-            entity.Property(e => e.UnitCode)
-                .HasColumnType("character varying")
-                .HasColumnName("unit_code");
         });
 
         modelBuilder.Entity<PaymentSystem>(entity =>
@@ -547,6 +554,7 @@ public partial class HotelDbContext : DbContext
             entity.Property(e => e.Number)
                 .HasColumnType("character varying")
                 .HasColumnName("number");
+            entity.Property(e => e.Quantity).HasColumnName("quantity");
             entity.Property(e => e.RoomTypeId).HasColumnName("room_type_id");
             entity.Property(e => e.Rooms).HasColumnName("rooms");
 
@@ -619,10 +627,18 @@ public partial class HotelDbContext : DbContext
             entity.HasIndex(e => e.Number, "snilses_number_key").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Lastname)
+                .HasColumnType("character varying")
+                .HasColumnName("lastname");
+            entity.Property(e => e.Name)
+                .HasColumnType("character varying")
+                .HasColumnName("name");
             entity.Property(e => e.Number)
                 .HasMaxLength(14)
                 .HasColumnName("number");
-            entity.Property(e => e.RegistrationDate).HasColumnName("registration_date");
+            entity.Property(e => e.Patronymic)
+                .HasColumnType("character varying")
+                .HasColumnName("patronymic");
         });
 
         modelBuilder.Entity<Tariff>(entity =>
@@ -736,10 +752,12 @@ public partial class HotelDbContext : DbContext
 
             entity.HasOne(d => d.Inn).WithMany(p => p.Users)
                 .HasForeignKey(d => d.InnId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("users_inn_id_fkey");
 
             entity.HasOne(d => d.Passport).WithMany(p => p.Users)
                 .HasForeignKey(d => d.PassportId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("users_passport_id_fkey");
 
             entity.HasOne(d => d.Snils).WithMany(p => p.Users)
@@ -757,9 +775,6 @@ public partial class HotelDbContext : DbContext
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("nextval('users_id_seq'::regclass)")
                 .HasColumnName("id");
-            entity.Property(e => e.AccessToken)
-                .HasColumnType("character varying")
-                .HasColumnName("access_token");
             entity.Property(e => e.Address)
                 .HasColumnType("character varying")
                 .HasColumnName("address");

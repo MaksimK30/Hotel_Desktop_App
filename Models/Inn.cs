@@ -10,9 +10,15 @@ public partial class Inn
 {
     public int Id { get; set; }
 
-    public string? Number { get; set; }
+    public string Number { get; set; } = null!;
 
-    public DateOnly? GetDate { get; set; }
+    public DateOnly GetDate { get; set; }
+
+    public string Lastname { get; set; } = null!;
+
+    public string Name { get; set; } = null!;
+
+    public string Patronymic { get; set; } = null!;
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

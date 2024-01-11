@@ -22,10 +22,6 @@ public partial class BankCard
 
     public int BankId { get; set; }
 
-    public bool IsBlocked { get; set; }
-
-    public string? BlockReason { get; set; }
-
     public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
 
     public virtual Bank Bank { get; set; } = null!;

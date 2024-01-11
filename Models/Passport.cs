@@ -11,6 +11,8 @@ public partial class Passport
 
     public int IssuerId { get; set; }
 
+    public string UnitCode { get; set; } = null!;
+
     public string Series { get; set; } = null!;
 
     public string Number { get; set; } = null!;
@@ -19,7 +21,7 @@ public partial class Passport
 
     public string Name { get; set; } = null!;
 
-    public string? Patronymic { get; set; }
+    public string Patronymic { get; set; } = null!;
 
     public int GenderId { get; set; }
 

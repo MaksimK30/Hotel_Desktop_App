@@ -13,6 +13,8 @@ public partial class Room
 
     public int RoomTypeId { get; set; }
 
+    public int Quantity { get; set; }
+
     public int Rooms { get; set; }
 
     public bool Minibar { get; set; }

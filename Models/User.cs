@@ -7,15 +7,15 @@ public partial class User
 {
     public int Id { get; set; }
 
-    public int? PassportId { get; set; }
+    public int PassportId { get; set; }
 
     public int SnilsId { get; set; }
 
-    public int? InnId { get; set; }
+    public int InnId { get; set; }
 
-    public string? Email { get; set; }
+    public string Email { get; set; } = null!;
 
-    public string? Phone { get; set; }
+    public string Phone { get; set; } = null!;
 
     public string Login { get; set; } = null!;
 
@@ -33,13 +33,13 @@ public partial class User
 
     public virtual Position IdNavigation { get; set; } = null!;
 
-    public virtual Inn? Inn { get; set; }
+    public virtual Inn Inn { get; set; } = null!;
 
     public virtual ICollection<Message> MessageFromNavigations { get; set; } = new List<Message>();
 
     public virtual ICollection<Message> MessageToNavigations { get; set; } = new List<Message>();
 
-    public virtual Passport? Passport { get; set; }
+    public virtual Passport Passport { get; set; } = null!;
 
     public virtual Snilse Snils { get; set; } = null!;
 

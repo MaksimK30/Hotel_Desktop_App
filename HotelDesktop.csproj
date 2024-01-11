@@ -15,6 +15,7 @@
 
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.6" />
         <PackageReference Include="Avalonia.Desktop" Version="11.0.6"/>
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6"/>
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6"/>
@@ -38,13 +39,5 @@
         <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.0.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <Folder Include="ViewModels\Forms\" />
-      <Folder Include="ViewModels\Tabs\" />
-      <Folder Include="Views\UserControls\Forms\" />
-      <Folder Include="Views\UserControls\Tabs\" />
     </ItemGroup>
 </Project>

@@ -14,7 +14,7 @@ public partial class Employee
 
     public DateOnly HireDate { get; set; }
 
-    public DateOnly? FireDate { get; set; }
+    public DateOnly FireDate { get; set; }
 
     public bool IsFired { get; set; }
 

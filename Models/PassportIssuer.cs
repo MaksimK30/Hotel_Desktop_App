@@ -12,7 +12,5 @@ public partial class PassportIssuer
 
     public string Title { get; set; } = null!;
 
-    public string UnitCode { get; set; } = null!;
-
     public virtual ICollection<Passport> Passports { get; set; } = new List<Passport>();
 }

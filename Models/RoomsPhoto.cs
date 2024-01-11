@@ -12,7 +12,7 @@ public partial class RoomsPhoto
 
     public int RoomId { get; set; }
 
-    public byte[] Photo { get; set; } = null!;
+    public byte[]? Photo { get; set; }
 
     public virtual Room Room { get; set; } = null!;
 }

@@ -12,7 +12,11 @@ public partial class Snilse
 
     public string Number { get; set; } = null!;
 
-    public DateOnly RegistrationDate { get; set; }
+    public string Lastname { get; set; } = null!;
+
+    public string Name { get; set; } = null!;
+
+    public string Patronymic { get; set; } = null!;
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }
