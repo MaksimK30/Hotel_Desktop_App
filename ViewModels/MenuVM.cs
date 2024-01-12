@@ -32,7 +32,7 @@ public class MenuVM : ViewModelBase
 
     public ICommand BankCardsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsTabVM();
         return null;
     }
     

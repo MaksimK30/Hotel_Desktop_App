@@ -41,7 +41,7 @@
                         Content="{Binding CurrentVM}">
             <ContentControl.DataTemplates>
                 <DataTemplate DataType="{x:Type vm:RolePlacesSettingsVM}">
-                    <userControls:RolePlacesSettingsUC/>
+                    <UCtabs:RolePlacesSettingsTabUC/>
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type VMtabs:InnsTabVM}">
                     <UCtabs:InnsTabUC/>
