@@ -12,7 +12,7 @@ namespace HotelDesktop.ViewModels.Tabs;
 public class UsersTabVM : ViewModelBase
 {
     private ObservableCollection<UsersTabRecord> _usersList;
-    private ObservableCollection<String> _searchParameters;
+    private List<String> _searchParameters;
     private int _selectedSearchParameter;
 
     public ObservableCollection<UsersTabRecord> UsersList
@@ -21,7 +21,7 @@ public class UsersTabVM : ViewModelBase
         set { this.RaiseAndSetIfChanged(ref _usersList, value); }
     }
 
-    public ObservableCollection<String> SearchParameters
+    public List<String> SearchParameters
     {
         get { return _searchParameters; }
         set { this.RaiseAndSetIfChanged(ref _searchParameters, value); }
@@ -56,5 +56,17 @@ public class UsersTabVM : ViewModelBase
                 }).First()
            );
         }
+
+        SearchParameters = new List<string>()
+        {
+            "Логин",
+            "Email",
+            "Телефон",
+            "Паспорт",
+            "СНИЛС",
+            "ИНН",
+            "Должность"
+        };
+        SelectedSearchParameter = 0;
     }
 }
