@@ -86,7 +86,7 @@ public class MenuVM : ViewModelBase
     
     public ICommand PassportsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new PassportsTabVM();
         return null;
     }
 
@@ -146,12 +146,7 @@ public class MenuVM : ViewModelBase
     
     public ICommand UsersCmd()
     {
-        Environment.Exit(0);
-        return null;
-    }
-
-    public ICommand RolePlacesCmd()
-    {
+        MainWindowViewModel.GetInstance().CurrentVM = new UsersTabVM();
         return null;
     }
 

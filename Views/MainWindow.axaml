@@ -46,6 +46,12 @@
                 <DataTemplate DataType="{x:Type VMtabs:InnsTabVM}">
                     <UCtabs:InnsTabUC/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:UsersTabVM}">
+                    <UCtabs:UsersTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:PassportsTabVM}">
+                    <UCtabs:PassportsTabUC/>
+                </DataTemplate>
             </ContentControl.DataTemplates>
         </ContentControl>
     </Grid>

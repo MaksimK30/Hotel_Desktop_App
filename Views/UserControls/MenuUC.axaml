@@ -17,8 +17,6 @@
                         Command="{Binding RolePlacesSettingsCmd}" />
                 <Button Content="Пользователи" Classes="menuBtn"
                         Command="{Binding UsersCmd}" />
-                <Button Content="Ролевые места" Classes="menuBtn"
-                        Command="{Binding RolePlacesCmd}" />
             </ComboBox>
 
             <ComboBox PlaceholderText="Документооборот" Classes="menuComboBox">
