@@ -40,23 +40,71 @@
         <ContentControl Grid.Row="1" Grid.Column="1"
                         Content="{Binding CurrentVM}">
             <ContentControl.DataTemplates>
-                <DataTemplate DataType="{x:Type vm:RolePlacesSettingsVM}">
-                    <UCtabs:RolePlacesSettingsTabUC/>
+                <DataTemplate DataType="{x:Type VMtabs:AccountsTabVM}">
+                    <UCtabs:AccountsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:BankCardsTabVM}">
+                    <UCtabs:BankCardsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:BanksTabVM}">
+                    <UCtabs:BanksTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:CashDesksTabVM}">
+                    <UCtabs:CashDesksTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:DepartmentsTabVM}">
+                    <UCtabs:DepartmentsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:EmployeesTabVM}">
+                    <UCtabs:EmployeesTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:GuestsTabVM}">
+                    <UCtabs:GuestsTabUC/>
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type VMtabs:InnsTabVM}">
                     <UCtabs:InnsTabUC/>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type VMtabs:UsersTabVM}">
-                    <UCtabs:UsersTabUC/>
+                <DataTemplate DataType="{x:Type VMtabs:MessengerTabVM}">
+                    <UCtabs:MessengerTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:PassportIssuersTabVM}">
+                    <UCtabs:PassportIssuersTabUC/>
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type VMtabs:PassportsTabVM}">
                     <UCtabs:PassportsTabUC/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:PaymentSystemsTabVM}">
+                    <UCtabs:PaymentSystemsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:PositionsTabVM}">
+                    <UCtabs:PositionsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:ReservationsTabVM}">
+                    <UCtabs:ReservationsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:RolePlacesSettingsTabVM}">
+                    <UCtabs:RolePlacesSettingsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:RoomsTabVM}">
+                    <UCtabs:RoomsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:ServicesTabVM}">
+                    <UCtabs:ServicesTabUC/>
+                </DataTemplate>
                 <DataTemplate DataType="{x:Type VMtabs:SnilsesTabVM}">
                     <UCtabs:SnilsesTabUC/>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type VMtabs:PassportIssuersTabVM}">
-                    <UCtabs:PassportIssuersTabUC/>
+                <DataTemplate DataType="{x:Type VMtabs:TariffsTabVM}">
+                    <UCtabs:TariffsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:TaxesTabVM}">
+                    <UCtabs:TaxesTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:TransactionsTabVM}">
+                    <UCtabs:TransactionsTabUC/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:UsersTabVM}">
+                    <UCtabs:UsersTabUC/>
                 </DataTemplate>
             </ContentControl.DataTemplates>
         </ContentControl>
