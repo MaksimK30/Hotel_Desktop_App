@@ -37,10 +37,11 @@ public class UsersTabVM : ViewModelBase
     {
         HotelDbContext dbContext = new HotelDbContext();
         List<User> allUsers = dbContext.Users.ToList();
-        UsersList = new ObservableCollection<UsersTabRecord>();
+        List<UsersTabRecord> recList = new List<UsersTabRecord>();
+        
         foreach (var user in allUsers)
         {
-           UsersList.Add(dbContext.Users
+           recList.Add(dbContext.Users
                 .Join(dbContext.Positions, user => user.Position, position => position.Id, (user, position) => new { user, position })
                 .Join(dbContext.Inns, user_pos => user_pos.user.InnId, inn => inn.Id, (user_pos, inn) => new { user_pos.user, user_pos.position, inn })
                 .Join(dbContext.Passports, user_inn => user_inn.user.PassportId, passport => passport.Id, (user_inn, passport) => new { user_inn.user, user_inn.position, user_inn.inn, passport })
@@ -56,7 +57,9 @@ public class UsersTabVM : ViewModelBase
                 }).First()
            );
         }
-
+        
+        UsersList = new ObservableCollection<UsersTabRecord>(recList);
+        
         SearchParameters = new List<string>()
         {
             "Логин",
@@ -67,6 +70,7 @@ public class UsersTabVM : ViewModelBase
             "ИНН",
             "Должность"
         };
+        
         SelectedSearchParameter = 0;
     }
 }

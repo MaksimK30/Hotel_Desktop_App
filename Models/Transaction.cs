@@ -28,5 +28,5 @@ public partial class Transaction
 
     public virtual Service Service { get; set; } = null!;
 
-    public virtual Taxis Tax { get; set; } = null!;
+    public virtual Taxes Tax { get; set; } = null!;
 }

@@ -25,14 +25,17 @@ public class RolePlacesSettingsTabVM : ViewModelBase
     public RolePlacesSettingsTabVM()
     {
         HotelDbContext dbContext = new HotelDbContext();
-        RolePlacesList = new ObservableCollection<RolePlacesSettingsTabRecord>();
         List<RolePlace> allRolePlaces = dbContext.RolePlaces.ToList();
+        List<RolePlacesSettingsTabRecord> recList = new List<RolePlacesSettingsTabRecord>();
+        
         foreach (var rp in allRolePlaces)
         {
-            RolePlacesList.Add(new RolePlacesSettingsTabRecord()
+            recList.Add(new RolePlacesSettingsTabRecord()
             {
                 Title = rp.Title
             });
         }
+
+        RolePlacesList = new ObservableCollection<RolePlacesSettingsTabRecord>(recList);
     }
 }

@@ -26,9 +26,9 @@ public class InnsTabVM : ViewModelBase
     public InnsTabVM()
     {
         HotelDbContext dbContext = new HotelDbContext();
-        InnsList = new ObservableCollection<InnTabRecord>();
         List<Inn> rawInnsList = new List<Inn>();
         rawInnsList = dbContext.Inns.ToList();
+        List<InnTabRecord> recList = new List<InnTabRecord>();
         
         foreach (var item in rawInnsList)
         {
@@ -36,12 +36,14 @@ public class InnsTabVM : ViewModelBase
                 .Where(p => p.Id == dbContext.Users.Where(u => u.Inn.Id == item.Id).FirstOrDefault().PassportId)
                 .FirstOrDefault();
             
-            InnsList.Add(new InnTabRecord()
+            recList.Add(new InnTabRecord()
             {
                 Number = item.Number,
                 GetDate = item.GetDate.ToString(),
                 User = $"{passport.Lastname} {passport.Name[0]}.{passport.Patronymic[0]}"
             });
         }
+
+        InnsList = new ObservableCollection<InnTabRecord>(recList);
     }
 }

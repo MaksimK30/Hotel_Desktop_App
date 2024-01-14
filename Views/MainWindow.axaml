@@ -16,12 +16,12 @@
 
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.8*"/>
-            <ColumnDefinition Width="8.2*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Меню" FontSize="25" FontWeight="Bold"

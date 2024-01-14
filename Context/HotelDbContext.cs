@@ -62,11 +62,11 @@ public partial class HotelDbContext : DbContext
 
     public virtual DbSet<Service> Services { get; set; }
 
-    public virtual DbSet<Snilse> Snilses { get; set; }
+    public virtual DbSet<Snils> Snilses { get; set; }
 
     public virtual DbSet<Tariff> Tariffs { get; set; }
 
-    public virtual DbSet<Taxis> Taxes { get; set; }
+    public virtual DbSet<Taxes> Taxes { get; set; }
 
     public virtual DbSet<Transaction> Transactions { get; set; }
 
@@ -618,7 +618,7 @@ public partial class HotelDbContext : DbContext
                 .HasColumnName("title");
         });
 
-        modelBuilder.Entity<Snilse>(entity =>
+        modelBuilder.Entity<Snils>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("snilses_pkey");
 
@@ -661,7 +661,7 @@ public partial class HotelDbContext : DbContext
                 .HasColumnName("title");
         });
 
-        modelBuilder.Entity<Taxis>(entity =>
+        modelBuilder.Entity<Taxes>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("taxes_pkey");
 

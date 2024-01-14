@@ -6,7 +6,7 @@ namespace HotelDesktop.Models;
 /// <summary>
 /// СНИЛСы пользователей
 /// </summary>
-public partial class Snilse
+public partial class Snils
 {
     public int Id { get; set; }
 

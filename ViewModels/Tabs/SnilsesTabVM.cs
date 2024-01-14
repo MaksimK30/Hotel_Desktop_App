@@ -37,9 +37,9 @@ public class SnilsesTabVM : ViewModelBase
     public SnilsesTabVM()
     {
         HotelDbContext dbContext = new HotelDbContext();
-        SnilsesList = new ObservableCollection<SnilsesTabRecord>();
-        List<Snilse> allSnilses = new List<Snilse>();
+        List<Snils> allSnilses = new List<Snils>();
         allSnilses = dbContext.Snilses.ToList();
+        List<SnilsesTabRecord> recList = new List<SnilsesTabRecord>();
         
         foreach (var snils in allSnilses)
         {
@@ -47,7 +47,7 @@ public class SnilsesTabVM : ViewModelBase
                 .Where(p => p.Id == dbContext.Users.Where(u => u.Inn.Id == snils.Id).FirstOrDefault().PassportId)
                 .FirstOrDefault();
             
-            SnilsesList.Add(new SnilsesTabRecord()
+            recList.Add(new SnilsesTabRecord()
             {
                 Number = snils.Number,
                 Lastname = snils.Lastname,
@@ -55,7 +55,9 @@ public class SnilsesTabVM : ViewModelBase
                 Patronymic = snils.Patronymic
             });
         }
-
+        
+        SnilsesList = new ObservableCollection<SnilsesTabRecord>(recList);
+        
         SearchParameters = new List<string>()
         {
             "Номер",
@@ -63,6 +65,7 @@ public class SnilsesTabVM : ViewModelBase
             "Имя",
             "Отчество"
         };
+        
         SelectedSearchParameter = 0;
     }
 }

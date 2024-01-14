@@ -6,7 +6,7 @@ namespace HotelDesktop.Models;
 /// <summary>
 /// Информация о налогах на финансовые транзакции
 /// </summary>
-public partial class Taxis
+public partial class Taxes
 {
     public int Id { get; set; }
 

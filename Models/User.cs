@@ -41,7 +41,7 @@ public partial class User
 
     public virtual Passport Passport { get; set; } = null!;
 
-    public virtual Snilse Snils { get; set; } = null!;
+    public virtual Snils Snils { get; set; } = null!;
 
     public virtual ICollection<UserJwt> UserJwts { get; set; } = new List<UserJwt>();
 }

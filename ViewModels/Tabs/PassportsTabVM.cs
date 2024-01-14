@@ -35,12 +35,12 @@ public class PassportsTabVM : ViewModelBase
     public PassportsTabVM()
     {
         HotelDbContext dbContext = new HotelDbContext();
-        PassportsList = new ObservableCollection<PassportsTabRecord>();
         List<Passport> allPassports = dbContext.Passports.ToList();
+        List<PassportsTabRecord> recList = new List<PassportsTabRecord>();
 
         foreach (var passport in allPassports)
         {
-            PassportsList.Add(new PassportsTabRecord()
+            recList.Add(new PassportsTabRecord()
             {
                 Series = passport.Series,
                 Number = passport.Number,
@@ -49,6 +49,9 @@ public class PassportsTabVM : ViewModelBase
                 Patronymic = passport.Patronymic
             });
         }
+
+        PassportsList = new ObservableCollection<PassportsTabRecord>(recList);
+        
         SearchParameters = new List<string>()
         {
             "Серия",
@@ -57,6 +60,7 @@ public class PassportsTabVM : ViewModelBase
             "Имя",
             "Отчество"
         };
+        
         SelectedSearchParameter = 0;
     }
 }

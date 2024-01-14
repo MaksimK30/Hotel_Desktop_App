@@ -22,7 +22,8 @@ public class PassportIssuersTabVM : ViewModelBase
     {
         HotelDbContext dbContext = new HotelDbContext();
         List<PassportIssuer> allIssuers = dbContext.PassportIssuers.ToList();
-        var recList = new ObservableCollection<PassportIssuersTabRec>();
+        List<PassportIssuersTabRec> recList = new List<PassportIssuersTabRec>();
+        
         foreach (var issuer in allIssuers)
         {
             recList.Add(new PassportIssuersTabRec()
@@ -31,6 +32,6 @@ public class PassportIssuersTabVM : ViewModelBase
             });
         }
 
-        IssuersList = recList;
+        IssuersList = new ObservableCollection<PassportIssuersTabRec>(recList);
     }
 }
