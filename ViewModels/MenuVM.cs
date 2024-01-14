@@ -122,7 +122,7 @@ public class MenuVM : ViewModelBase
     
     public ICommand SNILSEsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new SnilsesTabVM();
         return null;
     }
 

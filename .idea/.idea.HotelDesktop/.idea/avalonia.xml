@@ -16,6 +16,7 @@
         <entry key="Views/UserControls/Tabs/PassportsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/RolePlacesSettingsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/RolePlacesTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/SnilsesTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/UsersTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Ыендуы.axaml" value="HotelDesktop.csproj" />
       </map>
