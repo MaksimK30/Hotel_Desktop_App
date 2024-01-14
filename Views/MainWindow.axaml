@@ -55,6 +55,9 @@
                 <DataTemplate DataType="{x:Type VMtabs:SnilsesTabVM}">
                     <UCtabs:SnilsesTabUC/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type VMtabs:PassportIssuersTabVM}">
+                    <UCtabs:PassportIssuersTabUC/>
+                </DataTemplate>
             </ContentControl.DataTemplates>
         </ContentControl>
     </Grid>

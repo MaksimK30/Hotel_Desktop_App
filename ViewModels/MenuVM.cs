@@ -80,7 +80,7 @@ public class MenuVM : ViewModelBase
 
     public ICommand PassportIssuersCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new PassportIssuersTabVM();
         return null;
     }
     
