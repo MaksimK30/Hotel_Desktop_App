@@ -17,6 +17,7 @@
         <entry key="Views/UserControls/Tabs/BanksTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/CashDesksTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/DepartmentsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/DocumentManagement/InnsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/EmployeesTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/GuestsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/INNsTabUC.axaml" value="HotelDesktop.csproj" />
@@ -25,6 +26,8 @@
         <entry key="Views/UserControls/Tabs/PassportsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/PaymentSystemsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/PersonnelAccounting/DepartmentsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/PersonnelAccounting/EmployeesTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/PersonnelAccounting/PositionsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/PositionsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/ReservationsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/RolePlacesSettingsTabUC.axaml" value="HotelDesktop.csproj" />
