@@ -26,43 +26,43 @@ public class MenuVM : ViewModelBase
 
     public ICommand AccountCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new AccountsTabVM();
         return null;
     }
 
     public ICommand BankCardsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsTabVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new BankCardsTabVM();
         return null;
     }
     
     public ICommand BanksCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new BanksTabVM();
         return null;
     }
 
     public ICommand CashDesksCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new CashDesksTabVM();
         return null;
     }
     
     public ICommand DepartmentsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new DepartmentsTabVM();
         return null;
     }
 
     public ICommand EmployeesCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new EmployeesTabVM();
         return null;
     }
     
     public ICommand GuestsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new GuestsTabVM();
         return null;
     }
 
@@ -74,7 +74,7 @@ public class MenuVM : ViewModelBase
     
     public ICommand MessangerCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new MessengerTabVM();
         return null;
     }
 
@@ -92,31 +92,31 @@ public class MenuVM : ViewModelBase
 
     public ICommand PaymentSystemsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new PaymentSystemsTabVM();
         return null;
     }
     
     public ICommand PositionsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new PositionsTabVM();
         return null;
     }
 
     public ICommand ReservationsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new ReservationsTabVM();
         return null;
     }
     
     public ICommand RoomsCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new RoomsTabVM();
         return null;
     }
 
     public ICommand ServicesCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new ServicesTabVM();
         return null;
     }
     
@@ -128,19 +128,19 @@ public class MenuVM : ViewModelBase
 
     public ICommand TariffsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new TariffsTabVM();
         return null;
     }
     
     public ICommand TaxesCmd()
     {
-        Environment.Exit(0);
+        MainWindowViewModel.GetInstance().CurrentVM = new TaxesTabVM();
         return null;
     }
 
     public ICommand TransactionsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new TransactionsTabVM();
         return null;
     }
     
@@ -152,7 +152,7 @@ public class MenuVM : ViewModelBase
 
     public ICommand RolePlacesSettingsCmd()
     {
-        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsVM();
+        MainWindowViewModel.GetInstance().CurrentVM = new RolePlacesSettingsTabVM();
         return null;
     }
     

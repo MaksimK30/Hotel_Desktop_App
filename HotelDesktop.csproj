@@ -40,4 +40,114 @@
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="ViewModels\Forms\Administration\" />
+      <Folder Include="ViewModels\Forms\Communications\" />
+      <Folder Include="ViewModels\Forms\DocumentManagement\" />
+      <Folder Include="ViewModels\Forms\FinancialAccounting\" />
+      <Folder Include="ViewModels\Forms\PersonnelAccounting\" />
+      <Folder Include="ViewModels\Forms\PlacementManagement\" />
+      <Folder Include="ViewModels\Forms\ServicesManagement\" />
+      <Folder Include="Views\UserControls\Forms\Administration\" />
+      <Folder Include="Views\UserControls\Forms\Communications\" />
+      <Folder Include="Views\UserControls\Forms\DocumentManagement\" />
+      <Folder Include="Views\UserControls\Forms\FinancialAccounting\" />
+      <Folder Include="Views\UserControls\Forms\PersonnelAccounting\" />
+      <Folder Include="Views\UserControls\Forms\PlacementManagement\" />
+      <Folder Include="Views\UserControls\Forms\ServicesManagement\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Views\UserControls\Tabs\Administration\RolePlacesSettingsTabUC.axaml.cs">
+        <DependentUpon>RolePlacesSettingsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\Administration\UsersTabUC.axaml.cs">
+        <DependentUpon>UsersTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\Communications\MessengerTabUC.axaml.cs">
+        <DependentUpon>MessengerTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\DocumentManagement\InnsTabUC.axaml.cs">
+        <DependentUpon>InnsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\DocumentManagement\PassportsTabUC.axaml.cs">
+        <DependentUpon>PassportsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\DocumentManagement\PassportIssuersTabUC.axaml.cs">
+        <DependentUpon>PassportIssuersTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\DocumentManagement\SnilsesTabUC.axaml.cs">
+        <DependentUpon>SnilsesTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PersonnelAccounting\DepartmentsTabUC.axaml.cs">
+        <DependentUpon>DepartmentsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PersonnelAccounting\EmployeesTabUC.axaml.cs">
+        <DependentUpon>EmployeesTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PersonnelAccounting\PositionsTabUC.axaml.cs">
+        <DependentUpon>PositionsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\ServicesManagement\ServicesTabUC.axaml.cs">
+        <DependentUpon>ServicesTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\FinancialAccounting\RoomsTabUC.axaml.cs">
+        <DependentUpon>RoomsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\FinancialAccounting\TariffsTabUC.axaml.cs">
+        <DependentUpon>TariffsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\FinancialAccounting\ReservationsTabUC.axaml.cs">
+        <DependentUpon>ReservationsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\FinancialAccounting\GuestsTabUC.axaml.cs">
+        <DependentUpon>GuestsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\AccountsTabUC.axaml.cs">
+        <DependentUpon>AccountsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\BankCardsTabUC.axaml.cs">
+        <DependentUpon>BankCardsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\BanksTabUC.axaml.cs">
+        <DependentUpon>BanksTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\CashDesksTabUC.axaml.cs">
+        <DependentUpon>CashDesksTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\PaymentSystemsTabUC.axaml.cs">
+        <DependentUpon>PaymentSystemsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\TaxesTabUC.axaml.cs">
+        <DependentUpon>TaxesTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\UserControls\Tabs\PlacementManagement\TransactionsTabUC.axaml.cs">
+        <DependentUpon>TransactionsTabUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

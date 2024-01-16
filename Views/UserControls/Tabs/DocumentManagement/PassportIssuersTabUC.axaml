@@ -3,10 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabs="clr-namespace:HotelDesktop.ViewModels.Tabs"
-             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
-             x:Class="HotelDesktop.Views.UserControls.Tabs.InnsTabUC"
-             x:DataType="tabs:InnsTabVM">
-    <Grid>
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="HotelDesktop.Views.UserControls.Tabs.PassportIssuersTabUC"
+             x:DataType="tabs:PassportIssuersTabVM">
+   <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -16,48 +16,36 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right" Margin="0 0 15 0">
                 <Button Margin="0 5 15 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Select.png" Height="30" Width="30" ToolTip.Tip="Выбрать">
+                    <Image Source="../../../../Assets/Actions/Select.png" Height="30" Width="30" ToolTip.Tip="Выбрать">
                     </Image>
                 </Button>
                 <Button Margin="0 5 15 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Change.png" Height="30" Width="30" ToolTip.Tip="Изменить">
+                    <Image Source="../../../../Assets/Actions/Change.png" Height="30" Width="30" ToolTip.Tip="Изменить">
                     </Image>
                 </Button>
                 <Button Margin="0 5 0 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Delete.png" Height="30" Width="30" ToolTip.Tip="Удалить">
+                    <Image Source="../../../../Assets/Actions/Delete.png" Height="30" Width="30" ToolTip.Tip="Удалить">
                     </Image>
                 </Button>
             </StackPanel>
         
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right" Margin="0 0 15 5">
-                <CalendarDatePicker SelectedDateFormat="Custom" CustomDateFormatString="dd.MM.yyyy"
-                                    Watermark="Выдан после" Width="150" Margin="0 0 15 0"/>
-            
-                <CalendarDatePicker SelectedDateFormat="Custom" CustomDateFormatString="dd.MM.yyyy"
-                                    Watermark="Выдан до" Width="150" Margin="0 0 15 0"/>
-            
                 <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
-                         FontSize="17" Width="250" Watermark="Номер" Margin="0 0 15 0"/>
-            
-                <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
-                         FontSize="17" Width="250" Watermark="Пользователь"/>
+                         FontSize="17" Width="250" Watermark="Поиск"/>
             </StackPanel>
         </StackPanel>
         
         <DataGrid Grid.Row="1" IsReadOnly="True" CanUserReorderColumns="True"
-                  CanUserSortColumns="True" CanUserResizeColumns="True" ItemsSource="{Binding InnsList}"
+                  CanUserSortColumns="True" CanUserResizeColumns="True" ItemsSource="{Binding IssuersList}"
                   RowBackground="#717DD7" Foreground="#FFFFFF">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="#4B5CD7" />
                 <SolidColorBrush x:Key="DataGridColumnHeaderForegroundBrush" Color="#FFFFFF" />
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
-                <DataGridTextColumn Header="Дата выдачи" Binding="{Binding GetDate}"/>
-                <DataGridTextColumn Header="Пользователь" Binding="{Binding User}"/>
+                <DataGridTextColumn Header="Подразделение" Binding="{Binding Title}"/>
             </DataGrid.Columns>
-              
         </DataGrid>
     </Grid>
 </UserControl>

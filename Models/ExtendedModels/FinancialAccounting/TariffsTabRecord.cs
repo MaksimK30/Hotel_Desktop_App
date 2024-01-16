@@ -1,6 +1,6 @@
 namespace HotelDesktop.Models.ExtendedModels;
 
-public class TarrifsTabRecord
+public class TariffsTabRecord
 {
     public decimal Cost { get; set; }
 

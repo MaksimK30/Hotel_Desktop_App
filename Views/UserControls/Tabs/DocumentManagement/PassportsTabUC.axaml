@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabs="clr-namespace:HotelDesktop.ViewModels.Tabs"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="HotelDesktop.Views.UserControls.Tabs.UsersTabUC"
-             x:DataType="tabs:UsersTabVM">
-    <Grid>
+             x:Class="HotelDesktop.Views.UserControls.Tabs.PassportsTabUC"
+             x:DataType="tabs:PassportsTabVM">
+     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -16,46 +16,46 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right" Margin="0 0 15 0">
                 <Button Margin="0 5 15 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Select.png" Height="30" Width="30" ToolTip.Tip="Выбрать">
+                    <Image Source="../../../../Assets/Actions/Select.png" Height="30" Width="30" ToolTip.Tip="Выбрать">
                     </Image>
                 </Button>
                 <Button Margin="0 5 15 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Change.png" Height="30" Width="30" ToolTip.Tip="Изменить">
+                    <Image Source="../../../../Assets/Actions/Change.png" Height="30" Width="30" ToolTip.Tip="Изменить">
                     </Image>
                 </Button>
                 <Button Margin="0 5 0 5" IsVisible="True">
-                    <Image Source="../../../Assets/Actions/Delete.png" Height="30" Width="30" ToolTip.Tip="Удалить">
+                    <Image Source="../../../../Assets/Actions/Delete.png" Height="30" Width="30" ToolTip.Tip="Удалить">
                     </Image>
                 </Button>
             </StackPanel>
         
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right" Margin="0 0 15 5">
-               <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
-                         FontSize="17" Width="250" Watermark="Номер" Margin="0 0 15 0"/>
-            
-                <ComboBox VerticalAlignment="Center" HorizontalAlignment="Right"
-                         FontSize="17" Width="250" PlaceholderText="Столбец" ItemsSource="{Binding SearchParameters}" SelectedIndex="{Binding SelectedSearchParameter}"/>
+                <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
+                         FontSize="17" Width="250" Watermark="Поиск" Margin="0 0 15 0"/>
+                
+                <ComboBox ItemsSource="{Binding SearchParameters}" 
+                          SelectedIndex="{Binding SelectedSearchParameter}"
+                          PlaceholderText="Столбец"/>
             </StackPanel>
         </StackPanel>
         
         <DataGrid Grid.Row="1" IsReadOnly="True" CanUserReorderColumns="True"
-                  CanUserSortColumns="True" CanUserResizeColumns="True" ItemsSource="{Binding UsersList}"
+                  CanUserSortColumns="True" CanUserResizeColumns="True" ItemsSource="{Binding PassportsList}"
                   RowBackground="#717DD7" Foreground="#FFFFFF">
             <DataGrid.Resources>
                 <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="#4B5CD7" />
                 <SolidColorBrush x:Key="DataGridColumnHeaderForegroundBrush" Color="#FFFFFF" />
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
-                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Паспорт" Binding="{Binding PassportNumber}"/>
-                <DataGridTextColumn Header="СНИЛС" Binding="{Binding SnilsNumber}"/>
-                <DataGridTextColumn Header="ИНН" Binding="{Binding InnNumber}"/>
-                <DataGridTextColumn Header="Должность" Binding="{Binding Position}"/>
+                <DataGridTextColumn Header="Серия" Binding="{Binding Series}"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"/>                
             </DataGrid.Columns>
               
         </DataGrid>
     </Grid>
+    
 </UserControl>
