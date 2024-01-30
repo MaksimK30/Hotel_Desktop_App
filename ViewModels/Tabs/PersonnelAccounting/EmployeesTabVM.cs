@@ -48,8 +48,8 @@ public class EmployeesTabVM : ViewModelBase
                 LastName = employee.User.Passport.Lastname,
                 Position = employee.Position.Title,
                 Salary = employee.Salary.ToString(),
-                FireDate = employee.FireDate.ToString(),
-                HireDate = employee.HireDate.ToString(),
+                FireDate = employee.FireDate.ToString("dd/MM/yyyy"),
+                HireDate = employee.HireDate.ToString("dd/MM/yyyy"),
                 IsFired = employee.IsFired,
                 UserLogin = System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(employee.User.Login)) 
             });
