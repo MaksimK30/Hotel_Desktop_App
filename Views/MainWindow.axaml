@@ -10,7 +10,7 @@
         x:Class="HotelDesktop.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="HotelDesktop"
+        Title="Отель Изумруд"
         Background="#63ADD0"
         Foreground="White">
 

@@ -13,15 +13,20 @@
         <entry key="Views/UserControls/RolePlacesSettingsUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/AccountsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/Administration/RolePlacesSettingsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/Administration/UsersTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/BankCardsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/BanksTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/CashDesksTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/Communications/MessengerTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/DepartmentsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/DocumentManagement/InnsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/DocumentManagement/PassportIssuersTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/DocumentManagement/PassportsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/DocumentManagement/SnilsesTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/EmployeesTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/FinancialAccounting/GuestsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/FinancialAccounting/ReservationsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/FinancialAccounting/RoomsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/GuestsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/INNsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/InnsTabUC.axaml" value="HotelDesktop.csproj" />
