@@ -27,6 +27,7 @@
         <entry key="Views/UserControls/Tabs/FinancialAccounting/GuestsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/FinancialAccounting/ReservationsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/FinancialAccounting/RoomsTabUC.axaml" value="HotelDesktop.csproj" />
+        <entry key="Views/UserControls/Tabs/FinancialAccounting/TariffsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/GuestsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/INNsTabUC.axaml" value="HotelDesktop.csproj" />
         <entry key="Views/UserControls/Tabs/InnsTabUC.axaml" value="HotelDesktop.csproj" />

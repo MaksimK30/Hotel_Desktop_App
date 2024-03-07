@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabs="clr-namespace:HotelDesktop.ViewModels.Tabs"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="450"
              x:Class="HotelDesktop.Views.UserControls.Tabs.RoomsTabUC"
              x:DataType="tabs:RoomsTabVM">
     <Grid>
@@ -31,22 +31,15 @@
             
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Right" Margin="0 0 15 5">
-                <ComboBox SelectedIndex="{Binding SelectedRoomType}"
-                          ItemsSource="{Binding RoomTypesList}" Margin="0 0 15 0"/>
-
                 <CheckBox Content="Минибар" IsChecked="{Binding MinibarCB}" Margin="0 0 15 0"/>
 
                 <CheckBox Content="Джакузи" IsChecked="{Binding JacuzziCB}" Margin="0 0 15 0"/>
                 
-                <CalendarDatePicker SelectedDateFormat="Custom" CustomDateFormatString="dd.MM.yyyy"
-                                    Watermark="Бронирование по" Width="160" Margin="0 0 15 0"/>
-            
+                <ComboBox SelectedIndex="{Binding SelectedRoomType}" PlaceholderText="Тип номера"
+                          ItemsSource="{Binding RoomTypesList}" Margin="0 0 15 0" Width="150"/>
+                
                 <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
                          FontSize="17" Width="250" Watermark="Поиск" Margin="0 0 15 0"/>
-                
-                <ComboBox SelectedIndex="{Binding SelectedSearchParameter}"
-                          ItemsSource="{Binding SearchParameters}"
-                          Margin="0 0 15 0"/>
             </StackPanel>
         </StackPanel>
         
