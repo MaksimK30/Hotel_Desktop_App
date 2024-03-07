@@ -2,7 +2,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tabs="clr-namespace:HotelDesktop.ViewModels.Tabs"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="HotelDesktop.Views.UserControls.Tabs.TariffsTabUC">
-    Welcome to Avalonia!
+             x:Class="HotelDesktop.Views.UserControls.Tabs.TariffsTabUC"
+             x:DataType="tabs:TariffsTabVM">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right" Margin="0 0 15 0">
+                <Button Margin="0 5 15 5" IsVisible="True">
+                    <Image Source="../../../../Assets/Actions/Select.png" Height="30" Width="30" ToolTip.Tip="Выбрать">
+                    </Image>
+                </Button>
+                <Button Margin="0 5 15 5" IsVisible="True">
+                    <Image Source="../../../../Assets/Actions/Change.png" Height="30" Width="30" ToolTip.Tip="Изменить">
+                    </Image>
+                </Button>
+                <Button Margin="0 5 0 5" IsVisible="True">
+                    <Image Source="../../../../Assets/Actions/Delete.png" Height="30" Width="30" ToolTip.Tip="Удалить">
+                    </Image>
+                </Button>
+            </StackPanel>
+        
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right" Margin="0 0 15 5">
+                <CheckBox Content="Завтрак" IsChecked="{Binding HasBreakfast}" VerticalAlignment="Center" Margin="0 0 15 0"
+                          FontSize="17"/>
+                
+                <CheckBox Content="Обед" IsChecked="{Binding HasLunch}" VerticalAlignment="Center" Margin="0 0 15 0"
+                          FontSize="17"/>
+                
+                <CheckBox Content="Ужин" IsChecked="{Binding HasDinner}" VerticalAlignment="Center" Margin="0 0 15 0"
+                          FontSize="17"/>
+                
+                <TextBox Text="" VerticalAlignment="Center" HorizontalAlignment="Right"
+                         FontSize="17" Width="250" Watermark="Название" Margin="0 0 15 0"/>
+               
+            </StackPanel>
+        </StackPanel>
+        
+        <DataGrid Grid.Row="1" IsReadOnly="True" CanUserReorderColumns="True"
+                  CanUserSortColumns="True" CanUserResizeColumns="True" ItemsSource="{Binding TariffsList}"
+                  RowBackground="#717DD7" Foreground="#FFFFFF">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundBrush" Color="#4B5CD7" />
+                <SolidColorBrush x:Key="DataGridColumnHeaderForegroundBrush" Color="#FFFFFF" />
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Title}"/>
+                <DataGridCheckBoxColumn Header="Завтрак" Binding="{Binding Breakfast}"/>
+                <DataGridCheckBoxColumn Header="Обед" Binding="{Binding Lunch}"/>
+                <DataGridCheckBoxColumn Header="Ужин" Binding="{Binding Dinner}"/>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}"/>
+            </DataGrid.Columns>
+              
+        </DataGrid>
+    </Grid>
 </UserControl>
