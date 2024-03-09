@@ -9,4 +9,6 @@ public class AccountsTabRecord
     public string BankCardNumber { get; set; }
 
     public bool IsBlocked { get; set; }
+    public string BlockReason { get; set; }
+    
 }
